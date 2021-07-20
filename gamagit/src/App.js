@@ -3,11 +3,16 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App(props) {
-  const [ usuario, setUsuario ] = useState('Guilherme')
+  const [ user, setUser ] = useState ('');
+  function handleSearch() {
+    console.log(user);
+  }
   return (
+    
     <> 
-      <p>{ usuario }</p>
-      <input name="usuario" id="usuario" className="usuarioInput" placeholder="Usuário" />
+    <p>{ user }</p>
+      <input className="userInput" placeholder="Usuário" value={user} onChange={e => setUser(e.target.value)} />
+      <button type="button" onClick={handleSearch}>Pesquisar</button>
     </>
   );
 }
