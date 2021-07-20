@@ -1,23 +1,12 @@
-//import logo from './logo.svg';
-//import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
+import Routes from './routes';
 
-function App(props) {
-  const [ user, setUser ] = useState ('');
-  function handleSearch() {
-    console.log(user);
-  }
+
+function App() {
   return (
-    
-    <> 
-    <p>{ user }</p>
-      <input className="userInput" placeholder="Usuário" value={user} onChange={e => setUser(e.target.value)} />
-      <button type="button" onClick={handleSearch}>Pesquisar</button>
-    </>
+    <Routes />
   );
 }
-
-
 
 
 export default App;
